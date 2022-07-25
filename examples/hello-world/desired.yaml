@@ -1,0 +1,14 @@
+version: "v1.0"
+name: "Hello World"
+
+agent:
+  machine:
+    type: "e1-standard-2"
+    os_image: "ubuntu2004"
+
+blocks:
+  - name: "Hello World Test"
+    jobs:
+      - name: "Test"
+        commands:
+          - "docker run hello-world | grep \"Hello from Docker\""
